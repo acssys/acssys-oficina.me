@@ -20,6 +20,23 @@
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
         <!-- Core theme CSS (includes Bootstrap)-->
         <link href="css/styles.css" rel="stylesheet" />
+
+
+        <style>
+            textarea {
+              resize: none;
+
+
+              box-shadow: 0 0 0 0;
+    border: 0 none;
+    outline: 0;
+    border-style: hidden;
+    overflow-y: hidden;
+    visibility: hidden;
+    
+            }
+        </style>
+
     </head>
     <body id="page-top">
         <!-- Navigation-->
@@ -735,11 +752,25 @@
                                     </div>
                                     <!-- Portfolio Modal - Image-->
                                     <br>
-                                    <img class="img-fluid rounded mb-5" width="39%" height="39%" src="assets/img/portfolio/00020.png" alt="..." /><br><br>
+                                    <img class="img-fluid rounded mb-2" width="39%" height="39%" src="assets/img/portfolio/00020.png" alt="..." /><br>
+
+                                    <textarea   width="500px" height="200px" 
+                                    value="00020126580014BR.GOV.BCB.PIX01366fc06ec8-78c9-42ff-820f-933b92397abc520400005303986540525.005802BR5920CLAUDIO AMARAL DARIS6007GOIANIA6224052012270193930786450114630474E6" id="conteudo" >00020126580014BR.GOV.BCB.PIX01366fc06ec8-78c9-42ff-820f-933b92397abc520400005303986540525.005802BR5920CLAUDIO AMARAL DARIS6007GOIANIA6224052012270193930786450114630474E6</textarea><br>
+                                    <div class="text-center mt-2">    
+                                         
                                     <!-- Portfolio Modal - Text-->
                                     <p class="mb-2"><i class="fa-brands fa-pix me-2" ></i>Faca sua doacao via pix (R$ 25,00).</p>
                                     <p class="mb-2">Claudio Amaral - Programador e Desenvolvedor de Sistemas.</p>
 
+                                    <p>
+                                        <a class="btn   btn-primary " onclick="clicarFuncao()"
+                                         ><i class="fa-brands fa-pix me-2" ></i>
+                                         Copia e Cola.
+                                        </a>                     
+                                     </p>                                     
+                           
+                                   </div>  
+        
                                     <!-- Portfolio Modal - Text-->
                                     <p class="mb-4">E muito importante que o cliente esteja atento ao processo de adipiscagem. Resiliencia ou nada a assumir, para recusar as grandes adversidades, que qualquer um desejaria considerar mais severas, da vida? Ele os repreendera pelo que fizeram.</p>
 
@@ -764,5 +795,32 @@
         <!-- * * Activate your form at https://startbootstrap.com/solution/contact-forms * *-->
         <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
         <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+
+        <script>
+
+          //$('#ola').click(function(){
+            //Visto que o 'copy' copia o texto que estiver selecionado, talvez você queira colocar seu valor em um txt escondido
+            //$('#seuTxt').select();
+            //try {
+            //    var ok = document.execCommand('copy');
+            //      if (ok) { alert('Texto copiado para a área de transferência'); }
+            //    } catch (e) {
+            //     alert(e)
+            //   }
+          ///});
+
+          function clicarFuncao() {
+            var copiarTexto = document.getElementById("conteudo");
+            copiarTexto.select();
+            copiarTexto.setSelectionRange(0, 99999);
+            navigator.clipboard.writeText(copiarTexto.value);
+                alert("Copiado: " + copiarTexto.value);
+           }
+
+           //00020126580014BR.GOV.BCB.PIX01366fc06ec8-78c9-42ff-820f-933b92397abc520400005303986540525.005802BR5920CLAUDIO AMARAL DARIS6007GOIANIA6224052012270193930786450114630474E6
+        </script>    
+
     </body>
 </html>
